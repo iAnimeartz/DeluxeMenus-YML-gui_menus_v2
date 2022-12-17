@@ -1,0 +1,72 @@
+menu_title: '&8Confirm'
+open_command: confirm_vip_to_mvp
+update_interval: 10
+size: 26
+items:
+  'info':
+    material: 264
+    slot: 13
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    display_name: '&b&lConfirm Information'
+    lore:
+    - '&7Would you confirm are purchase the &bMVP&7 Rank?'
+    - ''
+    - '&7Cost: &b450 Credits'
+    - ''
+    - "&c&lCan't refund if purchased."
+  'confirm':
+    material: 35
+    data: 5
+    slot: 11
+    priority: 1
+    view_requirement:
+        requirements:
+            credits_requirements:
+                type: '>='
+                input: '%coins_amount%'
+                output: '450'
+            rank_requirements:
+                type: stringequalsignorecase
+                input: '%vault_rank%'
+                output: 'vip'
+    display_name: '&a&lConfirm'
+    lore:
+    - ''
+    - "&a\u25ba Click to confirm!"
+    left_click_commands:
+    - '[message] &aThank you for buy &bMVP &aRank!'
+    - '[console] forward console alert %player_name% &7have bought &bMVP &7Rank!'
+    - '[console] luckperms user %player_name% parent set mvp <delay=10>'
+    - '[console] credits take %player_name% 450'
+    - '[broadcastsound] WITHER_DEATH'
+    - '[close]'
+    right_click_commands:
+    - '[message] &aThank you for buy &bMVP &aRank!'
+    - '[console] forward console alert %player_name% &7have bought &bMVP &7Rank!'
+    - '[console] luckperms user %player_name% parent set mvp <delay=10>'
+    - '[console] credits take %player_name% 450'
+    - '[broadcastsound] WITHER_DEATH'
+    - '[close]'
+  'confirm-error':
+    material: 35
+    data: 5
+    slot: 11
+    priority: 2
+    display_name: '&C&lERROR!'
+    lore:
+    - ''
+    - "&c\u25ba Can't buy this rank!"
+  'deny':
+    material: 35
+    data: 14
+    slot: 15
+    display_name: '&c&lDeny'
+    lore:
+    - ''
+    - "&c\u25ba Click to deny!"
+    left_click_commands:
+    - '[close]'
+    right_click_commands:
+    - '[close]'

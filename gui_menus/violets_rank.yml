@@ -1,0 +1,906 @@
+menu_title: '&8Violets Rank'
+open_command: violets_rank
+update_interval: 2
+size: 45
+items:
+  'info':
+    material: head;%player_name%
+    slot: 4
+    display_name: '&b&lViolets Rank'
+    lore:
+    - ''
+    - '&7Buy and upgrade your current rank'
+    - ''
+    - '&7Purchased by using your &bCredits'
+    - ''
+    - '&7Rank: %vault_prefix%'
+    - '&7Credits: &b%coins_amount%'
+    - '&7Coins: &6%vault_eco_balance_fixed%'
+    - ''
+    - "&b\u25ba Click to visit store!"
+    left_click_commands:
+    - '[message]'
+    - '[message] &fVisit Server Store to buy &bCredits'
+    - '[message] &bwwww.violetsnetwork.net/#store'
+    - '[message]'
+    - '[sound] CLICK'
+    - '[close]'
+    right_click_commands:
+    - '[message]'
+    - '[message] &fVisit Server Store to buy &bCredits'
+    - '[message] &bwwww.violetsnetwork.net/#store'
+    - '[message]'
+    - '[sound] CLICK'
+    - '[close]'
+  'mvp+_close':
+    material: 351
+    data: 8
+    slot: 25
+    priority: 1
+    view_requirement:
+        requirements:
+            permission:
+                type: has permission
+                permission: rankshop.close.mvp+
+    display_name: '&bMVP&c+ &7Rank'
+    update: true
+    lore:
+    - ''
+    - "&c\u25ba You have already bought this rank!"
+    left_click_commands:
+    - '[message] &cYou have already bought this rank!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &cYou have already bought this rank!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'mvp+_mvp':
+    material: 388
+    slot: 25
+    priority: 2
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    view_requirement:
+        requirements:
+            rank_requirements:
+                type: string equals
+                input: '%vault_rank%'
+                output: 'mvp'
+            credits_requirements:
+                type: '>='
+                input: '%coins_amount%'
+                output: '400'
+    display_name: '&bMVP&c+ &7Rank'
+    update: true
+    lore:
+    - ''
+    - '&7MVP+ Rank for lifetime.'
+    - ''
+    - '&7Cost: &b400 Credits'
+    - ''
+    - "&a\u25ba Click to purchased this rank!"
+    left_click_commands:
+    - '[openguimenu] confirm_mvp_to_mvp+'
+    right_click_commands:
+    - '[openguimenu] confirm_mvp_to_mvp+'
+  'mvp+_mvp_nocredits':
+    material: 388
+    slot: 25
+    priority: 3
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    view_requirement:
+        requirements:
+            rank_requirements:
+                type: string equals
+                input: '%vault_rank%'
+                output: 'mvp'
+    display_name: '&bMVP&c+ &7Rank'
+    update: true
+    lore:
+    - ''
+    - '&7MVP+ Rank for lifetime.'
+    - ''
+    - '&7Cost: &b400 Credits'
+    - ''
+    - "&c\u25ba You don't have enough Credits!"
+    left_click_commands:
+    - '[message] '
+    - "[message] &cYou don't have enough Credits!"
+    - "[message] &fVisit Server Store to buy more &bCredits"
+    - '[message] &bwww.violetsnetwork.net/#store'
+    - '[message] '
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] '
+    - "[message] &cYou don't have enough Credits!"
+    - "[message] &fVisit Server Store to buy more &bCredits"
+    - '[message] &bwww.violetsnetwork.net/#store'
+    - '[message] '
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'mvp+_vip+':
+    material: 388
+    slot: 25
+    priority: 4
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    view_requirement:
+        requirements:
+            rank_requirements:
+                type: string equals
+                input: '%vault_rank%'
+                output: 'vip+'
+            credits_requirements:
+                type: '>='
+                input: '%coins_amount%'
+                output: '700'
+    display_name: '&bMVP&c+ &7Rank'
+    update: true
+    lore:
+    - ''
+    - '&7MVP+ Rank for lifetime.'
+    - ''
+    - '&7Cost: &b700 Credits'
+    - ''
+    - "&a\u25ba Click to purchased this rank!"
+    left_click_commands:
+    - '[openguimenu] confirm_vip+_to_mvp+'
+    right_click_commands:
+    - '[openguimenu] confirm_vip+_to_mvp+'
+  'mvp+_vip+_nocredits':
+    material: 388
+    slot: 25
+    priority: 5
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    view_requirement:
+        requirements:
+            rank_requirements:
+                type: string equals
+                input: '%vault_rank%'
+                output: 'vip+'
+    display_name: '&bMVP&c+ &7Rank'
+    update: true
+    lore:
+    - ''
+    - '&7MVP+ Rank for lifetime.'
+    - ''
+    - '&7Cost: &b700 Credits'
+    - ''
+    - "&c\u25ba You don't have enough Credits!"
+    left_click_commands:
+    - '[message] '
+    - "[message] &cYou don't have enough Credits!"
+    - "[message] &fVisit Server Store to buy more &bCredits"
+    - '[message] &bwww.violetsnetwork.net/#store'
+    - '[message] '
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] '
+    - "[message] &cYou don't have enough Credits!"
+    - "[message] &fVisit Server Store to buy more &bCredits"
+    - '[message] &bwww.violetsnetwork.net/#store'
+    - '[message] '
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'mvp+_vip':
+    material: 388
+    slot: 25
+    priority: 6
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    view_requirement:
+        requirements:
+            rank_requirements:
+                type: string equals
+                input: '%vault_rank%'
+                output: 'vip'
+            credits_requirements:
+                type: '>='
+                input: '%coins_amount%'
+                output: '850'
+    display_name: '&bMVP&c+ &7Rank'
+    update: true
+    lore:
+    - ''
+    - '&7MVP+ Rank for lifetime.'
+    - ''
+    - '&7Cost: &b850 Credits'
+    - ''
+    - "&a\u25ba Click to purchased this rank!"
+    left_click_commands:
+    - '[openguimenu] confirm_vip_to_mvp+'
+    right_click_commands:
+    - '[openguimenu] confirm_vip_to_mvp+'
+  'mvp+_vip_nocredits':
+    material: 388
+    slot: 25
+    priority: 7
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    view_requirement:
+        requirements:
+            rank_requirements:
+                type: string equals
+                input: '%vault_rank%'
+                output: 'vip'
+    display_name: '&bMVP&c+ &7Rank'
+    update: true
+    lore:
+    - ''
+    - '&7MVP+ Rank for lifetime.'
+    - ''
+    - '&7Cost: &b850 Credits'
+    - ''
+    - "&c\u25ba You don't have enough Credits!"
+    left_click_commands:
+    - '[message] '
+    - "[message] &cYou don't have enough Credits!"
+    - "[message] &fVisit Server Store to buy more &bCredits"
+    - '[message] &bwww.violetsnetwork.net/#store'
+    - '[message] '
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] '
+    - "[message] &cYou don't have enough Credits!"
+    - "[message] &fVisit Server Store to buy more &bCredits"
+    - '[message] &bwww.violetsnetwork.net/#store'
+    - '[message] '
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'mvp+_default':
+    material: 388
+    slot: 25
+    priority: 8
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    view_requirement:
+        requirements:
+            credits_requirements:
+                type: '>='
+                input: '%coins_amount%'
+                output: '1000'
+    display_name: '&bMVP&c+ &7Rank'
+    update: true
+    lore:
+    - ''
+    - '&7MVP+ Rank for lifetime.'
+    - ''
+    - '&7Cost: &b1000 Credits'
+    - ''
+    - "&a\u25ba Click to purchased this rank!"
+    left_click_commands:
+    - '[openguimenu] confirm_default_to_mvp+'
+    right_click_commands:
+    - '[openguimenu] confirm_default_to_mvp+'
+  'mvp+_default_nocredits':
+    material: 388
+    slot: 25
+    priority: 9
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    display_name: '&bMVP&c+ &7Rank'
+    update: true
+    lore:
+    - ''
+    - '&7MVP+ Rank for lifetime.'
+    - ''
+    - '&7Cost: &b1000 Credits'
+    - ''
+    - "&c\u25ba You don't have enough Credits!"
+    left_click_commands:
+    - '[message] '
+    - "[message] &cYou don't have enough Credits!"
+    - "[message] &fVisit Server Store to buy more &bCredits"
+    - '[message] &bwww.violetsnetwork.net/#store'
+    - '[message] '
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] '
+    - "[message] &cYou don't have enough Credits!"
+    - "[message] &fVisit Server Store to buy more &bCredits"
+    - '[message] &bwww.violetsnetwork.net/#store'
+    - '[message] '
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'mvp_close':
+    material: 351
+    data: 8
+    slot: 23
+    priority: 1
+    view_requirement:
+        requirements:
+            permission:
+                type: has permission
+                permission: rankshop.close.mvp
+    display_name: '&bMVP &7Rank'
+    update: true
+    lore:
+    - ''
+    - "&c\u25ba You have already bought this rank!"
+    left_click_commands:
+    - '[message] &cYou have already bought this rank!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &cYou have already bought this rank!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'mvp_vip+':
+    material: 264
+    slot: 23
+    priority: 4
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    view_requirement:
+        requirements:
+            rank_requirements:
+                type: string equals
+                input: '%vault_rank%'
+                output: 'vip+'
+            credits_requirements:
+                type: '>='
+                input: '%coins_amount%'
+                output: '300'
+    display_name: '&bMVP &7Rank'
+    update: true
+    lore:
+    - ''
+    - '&7MVP Rank for lifetime.'
+    - ''
+    - '&7Cost: &b300 Credits'
+    - ''
+    - "&a\u25ba Click to purchased this rank!"
+    left_click_commands:
+    - '[openguimenu] confirm_vip+_to_mvp'
+    right_click_commands:
+    - '[openguimenu] confirm_vip+_to_mvp'
+  'mvp_vip+_nocredits':
+    material: 264
+    slot: 23
+    priority: 5
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    view_requirement:
+        requirements:
+            rank_requirements:
+                type: string equals
+                input: '%vault_rank%'
+                output: 'vip+'
+    display_name: '&bMVP &7Rank'
+    update: true
+    lore:
+    - ''
+    - '&7MVP Rank for lifetime.'
+    - ''
+    - '&7Cost: &b300 Credits'
+    - ''
+    - "&c\u25ba You don't have enough Credits!"
+    left_click_commands:
+    - '[message] '
+    - "[message] &cYou don't have enough Credits!"
+    - "[message] &fVisit Server Store to buy more &bCredits"
+    - '[message] &bwww.violetsnetwork.net/#store'
+    - '[message] '
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] '
+    - "[message] &cYou don't have enough Credits!"
+    - "[message] &fVisit Server Store to buy more &bCredits"
+    - '[message] &bwww.violetsnetwork.net/#store'
+    - '[message] '
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'mvp_vip':
+    material: 264
+    slot: 23
+    priority: 6
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    view_requirement:
+        requirements:
+            rank_requirements:
+                type: string equals
+                input: '%vault_rank%'
+                output: 'vip'
+            credits_requirements:
+                type: '>='
+                input: '%coins_amount%'
+                output: '450'
+    display_name: '&bMVP &7Rank'
+    update: true
+    lore:
+    - ''
+    - '&7MVP Rank for lifetime.'
+    - ''
+    - '&7Cost: &b450 Credits'
+    - ''
+    - "&a\u25ba Click to purchased this rank!"
+    left_click_commands:
+    - '[openguimenu] confirm_vip_to_mvp'
+    right_click_commands:
+    - '[openguimenu] confirm_vip_to_mvp'
+  'mvp_vip_nocredits':
+    material: 264
+    slot: 23
+    priority: 7
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    view_requirement:
+        requirements:
+            rank_requirements:
+                type: string equals
+                input: '%vault_rank%'
+                output: 'vip'
+    display_name: '&bMVP &7Rank'
+    update: true
+    lore:
+    - ''
+    - '&7MVP Rank for lifetime.'
+    - ''
+    - '&7Cost: &b450 Credits'
+    - ''
+    - "&c\u25ba You don't have enough Credits!"
+    left_click_commands:
+    - '[message] '
+    - "[message] &cYou don't have enough Credits!"
+    - "[message] &fVisit Server Store to buy more &bCredits"
+    - '[message] &bwww.violetsnetwork.net/#store'
+    - '[message] '
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] '
+    - "[message] &cYou don't have enough Credits!"
+    - "[message] &fVisit Server Store to buy more &bCredits"
+    - '[message] &bwww.violetsnetwork.net/#store'
+    - '[message] '
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'mvp_default':
+    material: 264
+    slot: 23
+    priority: 8
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    view_requirement:
+        requirements:
+            credits_requirements:
+                type: '>='
+                input: '%coins_amount%'
+                output: '600'
+    display_name: '&bMVP &7Rank'
+    update: true
+    lore:
+    - ''
+    - '&7MVP Rank for lifetime.'
+    - ''
+    - '&7Cost: &b600 Credits'
+    - ''
+    - "&a\u25ba Click to purchased this rank!"
+    left_click_commands:
+    - '[openguimenu] confirm_default_to_mvp'
+    right_click_commands:
+    - '[openguimenu] confirm_default_to_mvp'
+  'mvp_default_nocredits':
+    material: 264
+    slot: 23
+    priority: 9
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    display_name: '&bMVP &7Rank'
+    update: true
+    lore:
+    - ''
+    - '&7MVP Rank for lifetime.'
+    - ''
+    - '&7Cost: &b600 Credits'
+    - ''
+    - "&c\u25ba You don't have enough Credits!"
+    left_click_commands:
+    - '[message] '
+    - "[message] &cYou don't have enough Credits!"
+    - "[message] &fVisit Server Store to buy more &bCredits"
+    - '[message] &bwww.violetsnetwork.net/#store'
+    - '[message] '
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] '
+    - "[message] &cYou don't have enough Credits!"
+    - "[message] &fVisit Server Store to buy more &bCredits"
+    - '[message] &bwww.violetsnetwork.net/#store'
+    - '[message] '
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'vip+_close':
+    material: 351
+    data: 8
+    slot: 21
+    priority: 1
+    view_requirement:
+        requirements:
+            permission:
+                type: has permission
+                permission: rankshop.close.vip+
+    display_name: '&aVIP&6+ &7Rank'
+    update: true
+    lore:
+    - ''
+    - "&c\u25ba You have already bought this rank!"
+    left_click_commands:
+    - '[message] &cYou have already bought this rank!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &cYou have already bought this rank!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'vip+_vip':
+    material: 266
+    slot: 21
+    priority: 6
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    view_requirement:
+        requirements:
+            rank_requirements:
+                type: string equals
+                input: '%vault_rank%'
+                output: 'vip'
+            credits_requirements:
+                type: '>='
+                input: '%coins_amount%'
+                output: '150'
+    display_name: '&aVIP&6+ &7Rank'
+    update: true
+    lore:
+    - ''
+    - '&7MVP Rank for lifetime.'
+    - ''
+    - '&7Cost: &b150 Credits'
+    - ''
+    - "&a\u25ba Click to purchased this rank!"
+    left_click_commands:
+    - '[openguimenu] confirm_vip_to_vip+'
+    right_click_commands:
+    - '[openguimenu] confirm_vip_to_vip+'
+  'vip+_vip_nocredits':
+    material: 266
+    slot: 21
+    priority: 7
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    view_requirement:
+        requirements:
+            rank_requirements:
+                type: string equals
+                input: '%vault_rank%'
+                output: 'vip'
+    display_name: '&aVIP&6+ &7Rank'
+    update: true
+    lore:
+    - ''
+    - '&7VIP+ Rank for lifetime.'
+    - ''
+    - '&7Cost: &b150 Credits'
+    - ''
+    - "&c\u25ba You don't have enough Credits!"
+    left_click_commands:
+    - '[message] '
+    - "[message] &cYou don't have enough Credits!"
+    - "[message] &fVisit Server Store to buy more &bCredits"
+    - '[message] &bwww.violetsnetwork.net/#store'
+    - '[message] '
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] '
+    - "[message] &cYou don't have enough Credits!"
+    - "[message] &fVisit Server Store to buy more &bCredits"
+    - '[message] &bwww.violetsnetwork.net/#store'
+    - '[message] '
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'vip+_default':
+    material: 266
+    slot: 21
+    priority: 8
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    view_requirement:
+        requirements:
+            credits_requirements:
+                type: '>='
+                input: '%coins_amount%'
+                output: '300'
+    display_name: '&aVIP&6+ &7Rank'
+    update: true
+    lore:
+    - ''
+    - '&7VIP+ Rank for lifetime.'
+    - ''
+    - '&7Cost: &b300 Credits'
+    - ''
+    - "&a\u25ba Click to purchased this rank!"
+    left_click_commands:
+    - '[openguimenu] confirm_default_to_vip+'
+    right_click_commands:
+    - '[openguimenu] confirm_default_to_vip+'
+  'vip+_default_nocredits':
+    material: 266
+    slot: 21
+    priority: 9
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    display_name: '&aVIP&6+ &7Rank'
+    update: true
+    lore:
+    - ''
+    - '&7VIP+ Rank for lifetime.'
+    - ''
+    - '&7Cost: &b300 Credits'
+    - ''
+    - "&c\u25ba You don't have enough Credits!"
+    left_click_commands:
+    - '[message] '
+    - "[message] &cYou don't have enough Credits!"
+    - "[message] &fVisit Server Store to buy more &bCredits"
+    - '[message] &bwww.violetsnetwork.net/#store'
+    - '[message] '
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] '
+    - "[message] &cYou don't have enough Credits!"
+    - "[message] &fVisit Server Store to buy more &bCredits"
+    - '[message] &bwww.violetsnetwork.net/#store'
+    - '[message] '
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'vip_close':
+    material: 351
+    data: 8
+    slot: 19
+    priority: 1
+    view_requirement:
+        requirements:
+            permission:
+                type: has permission
+                permission: rankshop.close.vip
+    display_name: '&aVIP &7Rank'
+    update: true
+    lore:
+    - ''
+    - "&c\u25ba You have already bought this rank!"
+    left_click_commands:
+    - '[message] &cYou have already bought this rank!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &cYou have already bought this rank!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'vip_default':
+    material: 265
+    slot: 19
+    priority: 8
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    view_requirement:
+        requirements:
+            credits_requirements:
+                type: '>='
+                input: '%coins_amount%'
+                output: '150'
+    display_name: '&aVIP &7Rank'
+    update: true
+    lore:
+    - ''
+    - '&7VIP Rank for lifetime.'
+    - ''
+    - '&7Cost: &b150 Credits'
+    - ''
+    - "&a\u25ba Click to purchased this rank!"
+    left_click_commands:
+    - '[openguimenu] confirm_default_to_vip'
+    right_click_commands:
+    - '[openguimenu] confirm_default_to_vip'
+  'vip_default_nocredits':
+    material: 265
+    slot: 19
+    priority: 9
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    display_name: '&aVIP &7Rank'
+    update: true
+    lore:
+    - ''
+    - '&7VIP Rank for lifetime.'
+    - ''
+    - '&7Cost: &b150 Credits'
+    - ''
+    - "&c\u25ba You don't have enough Credits!"
+    left_click_commands:
+    - '[message] '
+    - "[message] &cYou don't have enough Credits!"
+    - "[message] &fVisit Server Store to buy more &bCredits"
+    - '[message] &bwww.violetsnetwork.net/#store'
+    - '[message] '
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] '
+    - "[message] &cYou don't have enough Credits!"
+    - "[message] &fVisit Server Store to buy more &bCredits"
+    - '[message] &bwww.violetsnetwork.net/#store'
+    - '[message] '
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'mvp++_close':
+    material: 351
+    data: 8
+    slot: 31
+    priority: 4
+    display_name: '&6MVP&c++ &7Rank'
+    update: true
+    lore:
+    - ''
+    - '&7Requires &bMVP&c+ &7Rank'
+    - '&7to bought &6MVP&c++ &7Rank'
+    - ''
+    - "&c\u25ba Can't bought this rank!"
+    left_click_commands:
+    - "[message] &cYou can't bought this rank!"
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - "[message] &cYou can't bought this rank!"
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'mvp++_use':
+    material: 348
+    slot: 31
+    priority: 3
+    update: true
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    view_requirement:
+        requirements:
+            rank_requirements:
+                type: string equals
+                input: '%vault_rank%'
+                output: 'mvp++'
+    display_name: '&6MVP&c++ &7Rank'
+    update: true
+    lore:
+    - ''
+    - '&7MVP++ has expired: &c%luckperms_group_expiry_time_mvp++%'
+    - ''
+    - "&a\u25ba Click to see information!"
+    left_click_commands:
+    - '[message] &6MVP&c++&f has expired: &c%luckperms_group_expiry_time_mvp++%'
+    - '[sound] CLICK'
+    - '[close]'
+    right_click_commands:
+    - '[message] &6MVP&c++&f has expired: &c%luckperms_group_expiry_time_mvp++%'
+    - '[sound] CLICK'
+    - '[close]'
+  'mvp++_buy':
+    material: 348
+    slot: 31
+    priority: 1
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    view_requirement:
+        requirements:
+            rank_requirements:
+                type: string equals
+                input: '%vault_rank%'
+                output: 'mvp+'
+            credits_requirements:
+                type: '>='
+                input: '%coins_amount%'
+                output: '150'
+    display_name: '&6MVP&c++ &7Rank'
+    update: true
+    lore:
+    - ''
+    - '&7MVP++ Rank for 1 month'
+    - ''
+    - '&7Cost: &b150 Credits'
+    - ''
+    - "&a\u25ba Click to purchased this rank!"
+    left_click_commands:
+    - '[openguimenu] confirm_mvp+_to_mvp++'
+    right_click_commands:
+    - '[openguimenu] confirm_mvp+_to_mvp++'
+  'mvp+_mvp_nocredits':
+    material: 348
+    slot: 31
+    priority: 2
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    view_requirement:
+        requirements:
+            rank_requirements:
+                type: string equals
+                input: '%vault_rank%'
+                output: 'mvp+'
+    display_name: '&6MVP&c++ &7Rank'
+    update: true
+    lore:
+    - ''
+    - '&7MVP++ Rank for 1 month'
+    - ''
+    - '&7Cost: &b150 Credits'
+    - ''
+    - "&c\u25ba You don't have enough Credits!"
+    left_click_commands:
+    - '[message] '
+    - "[message] &cYou don't have enough Credits!"
+    - "[message] &fVisit Server Store to buy more &bCredits"
+    - '[message] &bwww.violetsnetwork.net/#store'
+    - '[message] '
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] '
+    - "[message] &cYou don't have enough Credits!"
+    - "[message] &fVisit Server Store to buy more &bCredits"
+    - '[message] &bwww.violetsnetwork.net/#store'
+    - '[message] '
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'back':
+    material: ARROW
+    data: 0
+    slot: 43
+    display_name: '&cGo Back'
+    lore:
+    - '&7Go back to shop menu'
+    left_click_commands:
+    - '[openguimenu] shop'
+    right_click_commands:
+    - '[openguimenu] shop'
+  'close':
+    material: 166
+    data: 0
+    slot: 44
+    display_name: '&cClose'
+    lore:
+    - '&7Closed violets shop menu'
+    left_click_commands:
+    - '[close]'
+    right_click_commands:
+    - '[close]'

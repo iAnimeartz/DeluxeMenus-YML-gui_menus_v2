@@ -1,0 +1,670 @@
+menu_title: '&8Online Time Achievements'
+open_command: achievements_online
+update_interval: 10
+size: 44
+items:
+  'info-error':
+    material: head;%player_name%
+    slot: 36
+    display_name: '&b&lViolets Online Time'
+    priority: 1
+    view_requirement:
+        requirements:
+            error_requirements:
+                type: 'string contains'
+                input: '%onlinetime_hours%'
+                output: 'error'
+    lore:
+    - ''
+    - '&7Rank: %vault_prefix%'
+    - '&7Online time: &cN/A'
+    - ''
+    - "&a\u25ba Click to view your stats!"
+    left_click_commands:
+    - '[openguimenu] my_stats'
+    right_click_commands:
+    - '[openguimenu] my_stats'
+  'info-d':
+    material: head;%player_name%
+    slot: 36
+    display_name: '&b&lViolets Online Time'
+    priority: 2
+    view_requirement:
+        requirements:
+            time_requirements:
+                type: '>='
+                input: '%onlinetime_hours%'
+                output: '24'
+    lore:
+    - ''
+    - '&7Rank: %vault_prefix%'
+    - '&7Online time: &c%onlinetime_days% Day(s)'
+    - ''
+    - "&a\u25ba Click to view your stats!"
+    left_click_commands:
+    - '[openguimenu] my_stats'
+    right_click_commands:
+    - '[openguimenu] my_stats'
+  'info-h':
+    material: 'head;%player_name%'
+    slot: 36
+    display_name: '&b&lViolets Online Time'
+    priority: 3
+    lore:
+    - ''
+    - '&7Rank: %vault_prefix%'
+    - '&7Online time: &c%onlinetime_hours% Hour(s)'
+    - ''
+    - "&a\u25ba Click to view your stats!"
+    left_click_commands:
+    - '[openguimenu] my_stats'
+    right_click_commands:
+    - '[openguimenu] my_stats'
+  'I-error':
+    material: 166 #error
+    slot: 11
+    display_name: '&c&kOnline Time I'
+    priority: 1
+    view_requirement:
+        requirements:
+            error_requirements:
+                type: string contains
+                input: '%onlinetime_hours%'
+                output: 'error'
+    update: true
+    lore:
+    - ''
+    - '&7Error! Please lock out'
+    - '&7and come back later!'
+    - ''
+    - "&c\u25ba Cannot load your data!"
+    left_click_commands:
+    - "[message] &cError! Please log out and come back later for reload your data!"
+    - '[sound] WITHER_HURT'
+    - '[close]'
+    right_click_commands:
+    - "[message] &cError! Please log out and come back later for reload your data!"
+    - '[sound] WITHER_HURT'
+    - '[close]'
+  'I':
+    material: 159
+    data: 14
+    slot: 11
+    display_name: '&cOnline Time I'
+    priority: 2
+    view_requirement:
+        requirements:
+            permission:
+                type: has permission
+                permission: achievements.onlinetime.I
+    update: true
+    lore:
+    - '&fOnline within the Violets Network'
+    - '&ffor 1 hour'
+    - ''
+    - '&7Progress: &aFINISH! &7(&a%onlinetime_hours%&7)'
+    - '&7Reward:'
+    - '&8+&61,000 &7Coins'
+    - "&8+&71 &e\u2730\u2730\u2730\u2730&7\u2730 &bMystery Boxes"
+    - ''
+    - "&c\u25ba You have already unlocked this achievements!"
+    left_click_commands:
+    - "[message] &cYou have already unlocked this achievements!"
+    - '[sound] WITHER_HURT'
+    - '[close]'
+    right_click_commands:
+    - "[message] &cYou have already unlocked this achievements!"
+    - '[sound] WITHER_HURT'
+    - '[close]'
+  'I-':
+    material: 159
+    data: 15
+    slot: 11
+    display_name: '&cOnline Time I'
+    priority: 3
+    view_requirement:
+        requirements:
+            time_requirements:
+                type: '<'
+                input: '%onlinetime_hours%'
+                output: '1'
+    update: true
+    lore:
+    - '&fOnline within the Violets Network'
+    - '&ffor 1 hour'
+    - ''
+    - '&7Progress: &c%onlinetime_hours%&7/&c1'
+    - '&7Reward:'
+    - '&8+&61,000 &7Coins'
+    - "&8+&71 &e\u2730\u2730\u2730\u2730&7\u2730 &bMystery Boxes"
+    - ''
+    - "&c\u25ba You can't unlock this yet!"
+    left_click_commands:
+    - "[message] &cYou can't unlock this yet!"
+    - '[sound] WITHER_HURT'
+    - '[close]'
+    right_click_commands:
+    - "[message] &cYou can't unlock this yet!"
+    - '[sound] WITHER_HURT'
+    - '[close]'
+  'I+':
+    material: 159
+    data: 5
+    slot: 11
+    display_name: '&aOnline Time I'
+    priority: 4
+    update: true
+    lore:
+    - '&fOnline within the Violets Network'
+    - '&ffor 1 hour'
+    - ''
+    - '&7Progress: &aDONE! &7(&a%onlinetime_hours%&7)'
+    - '&7Reward:'
+    - '&8+&61,000 &7Coins'
+    - "&8+&71 &e\u2730\u2730\u2730\u2730&7\u2730 &bMystery Boxes"
+    - ''
+    - "&a\u25ba Click to claim!"
+    left_click_commands:
+    - '[console] luckperms user %player_name% permission set achievements.onlinetime.I'
+    - '[message] &aYou unlocked your &bOnline Time I &aAchievements!'
+    - '[console] fe grant %player_name% 1000'
+    - '[console] gmysteryboxes give %player_name% 1 4'
+    - '[sound] ORB_PICKUP'
+    - '[close]'
+    right_click_commands:
+    - '[console] luckperms user %player_name% permission set achievements.onlinetime.I'
+    - '[message] &aYou unlocked your &bOnline Time I &aAchievements!'
+    - '[console] fe grant %player_name% 1000'
+    - '[console] gmysteryboxes give %player_name% 1 4'
+    - '[sound] ORB_PICKUP'
+    - '[close]'
+  'II-error':
+    material: 166 #error
+    slot: 12
+    display_name: '&c&kOnline Time II'
+    priority: 1
+    view_requirement:
+        requirements:
+            error_requirements:
+                type: string contains
+                input: '%onlinetime_days%'
+                output: 'error'
+    update: true
+    lore:
+    - ''
+    - '&7Error! Please lock out'
+    - '&7and come back later!'
+    - ''
+    - "&c\u25ba Cannot load your data!"
+    left_click_commands:
+    - "[message] &cError! Please log out and come back later for reload your data!"
+    - '[sound] WITHER_HURT'
+    - '[close]'
+    right_click_commands:
+    - "[message] &cError! Please log out and come back later for reload your data!"
+    - '[sound] WITHER_HURT'
+    - '[close]'
+  'II':
+    material: 159
+    data: 14
+    slot: 12
+    display_name: '&cOnline Time II'
+    priority: 2
+    view_requirement:
+        requirements:
+            permission:
+                type: has permission
+                permission: achievements.onlinetime.II
+    update: true
+    lore:
+    - '&fOnline within the Violets Network'
+    - '&ffor 1 day'
+    - ''
+    - '&7Progress: &aFINISH! &7(&a%onlinetime_hours%&7)'
+    - '&7Reward:'
+    - '&8+&62,000 &7Coins'
+    - '&8+&b5 &7Credits'
+    - "&8+&73 &e\u2730\u2730\u2730\u2730&7\u2730 &bMystery Boxes"
+    - ''
+    - "&c\u25ba You have already unlocked this achievements!"
+    left_click_commands:
+    - "[message] &cYou have already unlocked this achievements!"
+    - '[sound] WITHER_HURT'
+    - '[close]'
+    right_click_commands:
+    - "[message] &cYou have already unlocked this achievements!"
+    - '[sound] WITHER_HURT'
+    - '[close]'
+  'II-':
+    material: 159
+    data: 15
+    slot: 12
+    display_name: '&cOnline Time II'
+    priority: 3
+    view_requirement:
+        requirements:
+            time_requirements:
+                type: '<'
+                input: '%onlinetime_days%'
+                output: '1'
+    update: true
+    lore:
+    - '&fOnline within the Violets Network'
+    - '&ffor 1 day'
+    - ''
+    - '&7Progress: &c%onlinetime_days%&7/&c1'
+    - '&7Reward:'
+    - '&8+&62,000 &7Coins'
+    - '&8+&b5 &7Credits'
+    - "&8+&73 &e\u2730\u2730\u2730\u2730&7\u2730 &bMystery Boxes"
+    - ''
+    - "&c\u25ba You can't unlock this yet!"
+    left_click_commands:
+    - "[message] &cYou can't unlock this yet!"
+    - '[sound] WITHER_HURT'
+    - '[close]'
+    right_click_commands:
+    - "[message] &cYou can't unlock this yet!"
+    - '[sound] WITHER_HURT'
+    - '[close]'
+  'II+':
+    material: 159
+    data: 5
+    slot: 12
+    display_name: '&aOnline Time II'
+    priority: 4
+    update: true
+    lore:
+    - '&fOnline within the Violets Network'
+    - '&ffor 1 day'
+    - ''
+    - '&7Progress: &aDONE! &7(&a%onlinetime_days%&7)'
+    - '&7Reward:'
+    - '&8+&62,000 &7Coins'
+    - '&8+&b5 &7Credits'
+    - "&8+&73 &e\u2730\u2730\u2730\u2730&7\u2730 &bMystery Boxes"
+    - ''
+    - "&a\u25ba Click to claim!"
+    left_click_commands:
+    - '[console] luckperms user %player_name% permission set achievements.onlinetime.II'
+    - '[message] &aYou unlocked your &bOnline Time II &aAchievements!'
+    - '[console] fe grant %player_name% 2000'
+    - '[console] credits give %player_name% 5'
+    - '[console] gmysteryboxes give %player_name% 3 4'
+    - '[sound] ORB_PICKUP'
+    - '[close]'
+    right_click_commands:
+    - '[console] luckperms user %player_name% permission set achievements.onlinetime.II'
+    - '[message] &aYou unlocked your &bOnline Time II &aAchievements!'
+    - '[console] fe grant %player_name% 2000'
+    - '[console] credits give %player_name% 5'
+    - '[console] gmysteryboxes give %player_name% 3 4'
+    - '[sound] ORB_PICKUP'
+    - '[close]'
+  'III-error':
+    material: 166 #error
+    slot: 14
+    display_name: '&c&kOnline Time III'
+    priority: 1
+    view_requirement:
+        requirements:
+            error_requirements:
+                type: string contains
+                input: '%onlinetime_days%'
+                output: 'error'
+    update: true
+    lore:
+    - ''
+    - '&7Error! Please lock out'
+    - '&7and come back later!'
+    - ''
+    - "&c\u25ba Cannot load your data!"
+    left_click_commands:
+    - "[message] &cError! Please log out and come back later for reload your data!"
+    - '[sound] WITHER_HURT'
+    - '[close]'
+    right_click_commands:
+    - "[message] &cError! Please log out and come back later for reload your data!"
+    - '[sound] WITHER_HURT'
+    - '[close]'
+  'III':
+    material: 159
+    data: 14
+    slot: 14
+    display_name: '&cOnline Time III'
+    priority: 2
+    view_requirement:
+        requirements:
+            permission:
+                type: has permission
+                permission: achievements.onlinetime.III
+    update: true
+    lore:
+    - '&fOnline within the Violets Network'
+    - '&ffor 1 week'
+    - ''
+    - '&7Progress: &aFINISH! &7(&a%onlinetime_days%D&7)'
+    - '&7Reward:'
+    - '&8+&63,500 &7Coins'
+    - '&8+&b10 &7Credits'
+    - "&8+&75 &e\u2730\u2730\u2730\u2730&7\u2730 &bMystery Boxes"
+    - ''
+    - "&c\u25ba You have already unlocked this achievements!"
+    left_click_commands:
+    - "[message] &cYou have already unlocked this achievements!"
+    - '[sound] WITHER_HURT'
+    - '[close]'
+    right_click_commands:
+    - "[message] &cYou have already unlocked this achievements!"
+    - '[sound] WITHER_HURT'
+    - '[close]'
+  'III-':
+    material: 159
+    data: 15
+    slot: 14
+    display_name: '&cOnline Time III'
+    priority: 3
+    view_requirement:
+        requirements:
+            time_requirements:
+                type: '<'
+                input: '%onlinetime_days%'
+                output: '7'
+    update: true
+    lore:
+    - '&fOnline within the Violets Network'
+    - '&ffor 1 week'
+    - ''
+    - '&7Progress: &c%onlinetime_days%&7/&c7'
+    - '&7Reward:'
+    - '&8+&63,500 &7Coins'
+    - '&8+&b10 &7Credits'
+    - "&8+&75 &e\u2730\u2730\u2730\u2730&7\u2730 &bMystery Boxes"
+    - ''
+    - "&c\u25ba You can't claim this yet!"
+    left_click_commands:
+    - "[message] &cYou can't unlocked this yet!"
+    - '[sound] WITHER_HURT'
+    - '[close]'
+    right_click_commands:
+    - "[message] &cYou can't unlocked this yet!"
+    - '[sound] WITHER_HURT'
+    - '[close]'
+  'III+':
+    material: 159
+    data: 5
+    slot: 14
+    display_name: '&aOnline Time III'
+    priority: 4
+    update: true
+    lore:
+    - '&fOnline within the Violets Network'
+    - '&ffor 1 week'
+    - ''
+    - '&7Progress: &aDONE! &7(&a%onlinetime_days%D&7)'
+    - '&7Reward:'
+    - '&8+&63,500 &7Coins'
+    - '&8+&b10 &7Credits'
+    - "&8+&75 &e\u2730\u2730\u2730\u2730&7\u2730 &bMystery Boxes"
+    - ''
+    - "&a\u25ba Click to unlock!"
+    left_click_commands:
+    - '[console] luckperms user %player_name% permission set achievements.onlinetime.III'
+    - '[message] &aYou claimed your &bOnline Time III &aAchievements!'
+    - '[console] fe grant %player_name% 3500'
+    - '[console] credits give %player_name% 10'
+    - '[console] gmysteryboxes give %player_name% 5 4'
+    - '[sound] ORB_PICKUP'
+    - '[close]'
+    right_click_commands:
+    - '[console] luckperms user %player_name% permission set achievements.onlinetime.III'
+    - '[message] &aYou claimed your &bOnline Time III &aAchievements!'
+    - '[console] fe grant %player_name% 3500'
+    - '[console] credits give %player_name% 10'
+    - '[console] gmysteryboxes give %player_name% 5 4'
+    - '[sound] ORB_PICKUP'
+    - '[close]'
+  'IV-error':
+    material: 166 #error
+    slot: 15
+    display_name: '&c&kOnline Time IV'
+    priority: 1
+    view_requirement:
+        requirements:
+            error_requirements:
+                type: string contains
+                input: '%onlinetime_days%'
+                output: 'error'
+    update: true
+    lore:
+    - ''
+    - '&7Error! Please lock out'
+    - '&7and come back later!'
+    - ''
+    - "&c\u25ba Cannot load your data!"
+    left_click_commands:
+    - "[message] &cError! Please log out and come back later for reload your data!"
+    - '[sound] WITHER_HURT'
+    - '[close]'
+    right_click_commands:
+    - "[message] &cError! Please log out and come back later for reload your data!"
+    - '[sound] WITHER_HURT'
+    - '[close]'
+  'IV':
+    material: 159
+    data: 14
+    slot: 15
+    display_name: '&cOnline Time IV'
+    priority: 2
+    view_requirement:
+        requirements:
+            permission:
+                type: has permission
+                permission: achievements.onlinetime.IV
+    update: true
+    lore:
+    - '&fOnline within the Violets Network'
+    - '&ffor 1 month'
+    - ''
+    - '&7Prograss: &aFINISH! &7(&c%onlinetime_days%D&7)'
+    - '&7Reward:'
+    - '&8+&67,000 &7Coins'
+    - '&8+&b30 &7Credits'
+    - "&8+&710 &e\u2730\u2730\u2730\u2730&7\u2730 &bMystery Boxes"
+    - ''
+    - "&c\u25ba You have already unlocked this achievements!"
+    left_click_commands:
+    - "[message] &cYou have already unlocked this achievements!"
+    - '[sound] WITHER_HURT'
+    - '[close]'
+    right_click_commands:
+    - "[message] &cYou have already unlocked this achievements!"
+    - '[sound] WITHER_HURT'
+    - '[close]'
+  'IV-':
+    material: 159
+    data: 15
+    slot: 15
+    display_name: '&cOnline Time IV'
+    priority: 3
+    view_requirement:
+        requirements:
+            time_requirements:
+                type: '<'
+                input: '%onlinetime_days%'
+                output: '30'
+    update: true
+    lore:
+    - '&fOnline within the Violets Network'
+    - '&ffor 1 month'
+    - ''
+    - '&7Prograss: &c%onlinetime_days%&7/&c30'
+    - '&7Reward:'
+    - '&8+&67,000 &7Coins'
+    - '&8+&b30 &7Credits'
+    - "&8+&710 &e\u2730\u2730\u2730\u2730&7\u2730 &bMystery Boxes"
+    - ''
+    - "&c\u25ba You can't unlock this yet!"
+    left_click_commands:
+    - "[message] &cYou can't unlock this yet!"
+    - '[sound] WITHER_HURT'
+    - '[close]'
+    right_click_commands:
+    - "[message] &cYou can't unlock this yet!"
+    - '[sound] WITHER_HURT'
+    - '[close]'
+  'IV+':
+    material: 159
+    data: 5
+    slot: 15
+    display_name: '&aOnline Time IV'
+    priority: 4
+    update: true
+    lore:
+    - '&fOnline within the Violets Network'
+    - '&ffor 1 month'
+    - ''
+    - '&7Prograss: &aDONE! &7(&A%onlinetime_days%D&7)'
+    - '&7Reward:'
+    - '&8+&67,000 &7Coins'
+    - '&8+&b30 &7Credits'
+    - "&8+&710 &e\u2730\u2730\u2730\u2730&7\u2730 &bMystery Boxes"
+    - ''
+    - "&a\u25ba Click to claim!"
+    left_click_commands:
+    - '[console] luckperms user %player_name% permission set achievements.onlinetime.IV'
+    - '[message] &aYou claimed your &bOnline Time IV &aAchievements!'
+    - '[console] fe grant %player_name% 7000'
+    - '[console] credits give %player_name% 30'
+    - '[console] gmysteryboxes give %player_name% 10 4'
+    - '[sound] ORB_PICKUP'
+    - '[close]'
+    right_click_commands:
+    - '[console] luckperms user %player_name% permission set achievements.onlinetime.IV'
+    - '[message] &aYou claimed your &bOnline Time IV &aAchievements!'
+    - '[console] fe grant %player_name% 7000'
+    - '[console] credits give %player_name% 30'
+    - '[console] gmysteryboxes give %player_name% 10 4'
+    - '[sound] ORB_PICKUP'
+    - '[close]'
+  'close':
+    material: 166
+    data: 0
+    slot: 44
+    display_name: '&cClose'
+    lore:
+    - '&7Closed my stats menu'
+    left_click_commands:
+    - '[close]'
+    right_click_commands:
+    - '[close]'
+  'back':
+    material: ARROW
+    data: 0
+    slot: 43
+    display_name: '&cGo Back'
+    lore:
+    - '&7Go back to my profile menu'
+    left_click_commands:
+    - '[openguimenu] profile_menu'
+    right_click_commands:
+    - '[openguimenu] profile_menu'
+  '100':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 35
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '101':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 34
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '102':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 33
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '103':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 32
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '104':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 31
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '105':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 30
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '106':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 29
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '107':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 28
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '108':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 27
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'

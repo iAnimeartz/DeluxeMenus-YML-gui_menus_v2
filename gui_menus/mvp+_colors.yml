@@ -1,0 +1,1054 @@
+menu_title: '&8MVP+ Rank Color'
+open_command: mvp+_colors
+open_requirement:
+  requirements:
+    rank:
+      type: stringequalsignorecase
+      input: '%vault_rank%'
+      output: mvp+
+      deny_commands:
+      - '[message] &cYou must be &bMVP&c+ to use this command!'
+      - '[sound] VILLAGER_NO'
+      - '[close]'
+size: 45
+items:
+  'red-use':
+    material: INK_SACK
+    data: 1
+    slot: 10
+    priority: 1
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: stringequalsignorecase
+                input: '%vault_prefix%'
+                output: '&bMVP&c+'
+    display_name: '&aRed MVP+ Rank Color'
+    lore:
+    - '&7The default color for &bMVP&c+'
+    - ''
+    - "&a\u25ba Currently selected!"
+    left_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'red-buy':
+    material: INK_SACK
+    data: 1
+    slot: 10
+    priority: 2
+    display_name: '&aRed MVP+ Rank Color'
+    lore:
+    - '&7The default color for &bMVP&c+'
+    - ''
+    - "&e\u25ba Click to select!"
+    left_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&c+ <delay=10>'
+    - '[close]'
+    right_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&c+ <delay=10>'
+    - '[close]'
+  'gold-use':
+    material: INK_SACK
+    data: 14
+    slot: 11
+    priority: 1
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: stringequalsignorecase
+                input: '%vault_prefix%'
+                output: '&bMVP&6+'
+    display_name: '&aGold MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to gold, turning it into &bMVP&6+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&a\u25ba Currently selected!"
+    left_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'gold-buy':
+    material: INK_SACK
+    data: 14
+    slot: 11
+    priority: 2
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: '>='
+                input: '%pvplevels_level%'
+                output: '2'
+    display_name: '&aGold MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to gold, turning it into &bMVP&6+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&e\u25ba Click to select!"
+    left_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&6+ <delay=10>'
+    - '[close]'
+    right_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&6+ <delay=10>'
+    - '[close]'
+  'gold-select':
+    material: INK_SACK
+    data: 14
+    slot: 11
+    priority: 3
+    display_name: '&cGold MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to gold, turning it into &bMVP&6+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&c\u25ba Unlocked at Violets Level 2!"
+    left_click_commands:
+    - '[sound] VILLAGER_NO'
+    - "[message] &cYou haven't unlocked that yet!"
+    - '[close] '
+    right_click_commands:
+    - '[sound] VILLAGER_NO'
+    - "[message] &cYou haven't unlocked that yet!"
+    - '[close] '
+  'green-use':
+    material: INK_SACK
+    data: 10
+    slot: 12
+    priority: 1
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: stringequalsignorecase
+                input: '%vault_prefix%'
+                output: '&bMVP&a+'
+    display_name: '&aGreen MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to green, turning it into &bMVP&a+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&a\u25ba Currently selected!"
+    left_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'green-buy':
+    material: INK_SACK
+    data: 10
+    slot: 12
+    priority: 2
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: '>='
+                input: '%pvplevels_level%'
+                output: '5'
+    display_name: '&aGreen MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to green, turning it into &bMVP&a+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&e\u25ba Click to select!"
+    left_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&a+ <delay=10>'
+    - '[close]'
+    right_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&a+ <delay=10>'
+    - '[close]'
+  'green-select':
+    material: INK_SACK
+    data: 10
+    slot: 12
+    priority: 3
+    display_name: '&cGreen MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to green, turning it into &bMVP&a+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&c\u25ba Unlocked at Violets Level 5!"
+    left_click_commands:
+    - '[sound] VILLAGER_NO'
+    - "[message] &cYou haven't unlocked that yet!"
+    - '[close] '
+    right_click_commands:
+    - '[sound] VILLAGER_NO'
+    - "[message] &cYou haven't unlocked that yet!"
+    - '[close] '
+  'yellow-use':
+    material: INK_SACK
+    data: 11
+    slot: 13
+    priority: 1
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: stringequalsignorecase
+                input: '%vault_prefix%'
+                output: '&bMVP&e+'
+    display_name: '&aYellow MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to yellow, turning it into &bMVP&e+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&a\u25ba Currently selected!"
+    left_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'yellow-buy':
+    material: INK_SACK
+    data: 11
+    slot: 13
+    priority: 2
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: '>='
+                input: '%pvplevels_level%'
+                output: '8'
+    display_name: '&aYellow MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to yellow, turning it into &bMVP&e+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&e\u25ba Click to select!"
+    left_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&e+ <delay=10>'
+    - '[close]'
+    right_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&e+ <delay=10>'
+    - '[close]'
+  'yellow-select':
+    material: INK_SACK
+    data: 11
+    slot: 13
+    priority: 3
+    display_name: '&cYellow MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to yellow, turning it into &bMVP&e+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&c\u25ba Unlocked at Violets Level 8!"
+    left_click_commands:
+    - '[sound] VILLAGER_NO'
+    - "[message] &cYou haven't unlocked that yet!"
+    - '[close] '
+    right_click_commands:
+    - '[sound] VILLAGER_NO'
+    - "[message] &cYou haven't unlocked that yet!"
+    - '[close] '
+  'lightpurple-use':
+    material: INK_SACK
+    data: 9
+    slot: 14
+    priority: 1
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: stringequalsignorecase
+                input: '%vault_prefix%'
+                output: '&bMVP&d+'
+    display_name: '&aLight Purple MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to light purple, turning it into &bMVP&d+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&a\u25ba Currently selected!"
+    left_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'lightpurple-buy':
+    material: INK_SACK
+    data: 9
+    slot: 14
+    priority: 2
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: '>='
+                input: '%pvplevels_level%'
+                output: '10'
+    display_name: '&aLight Purple MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to light purple, turning it into &bMVP&d+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&e\u25ba Click to select!"
+    left_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&d+ <delay=10>'
+    - '[close]'
+    right_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&d+ <delay=10>'
+    - '[close]'
+  'lightpurple-select':
+    material: INK_SACK
+    data: 9
+    slot: 14
+    priority: 3
+    display_name: '&cLight Purple MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to light purple, turning it into &bMVP&e+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&c\u25ba Unlocked at Violets Level 10!"
+    left_click_commands:
+    - '[sound] VILLAGER_NO'
+    - "[message] &cYou haven't unlocked that yet!"
+    - '[close] '
+    right_click_commands:
+    - '[sound] VILLAGER_NO'
+    - "[message] &cYou haven't unlocked that yet!"
+    - '[close] '
+  'white-use':
+    material: INK_SACK
+    data: 15
+    slot: 15
+    priority: 1
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: stringequalsignorecase
+                input: '%vault_prefix%'
+                output: '&bMVP&f+'
+    display_name: '&aWhite MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to white, turning it into &bMVP&f+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&a\u25ba Currently selected!"
+    left_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'white-buy':
+    material: INK_SACK
+    data: 15
+    slot: 15
+    priority: 2
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: '>='
+                input: '%pvplevels_level%'
+                output: '15'
+    display_name: '&aWhite MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to white, turning it into &bMVP&f+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&e\u25ba Click to select!"
+    left_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&f+ <delay=10>'
+    - '[close]'
+    right_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&f+ <delay=10>'
+    - '[close]'
+  'white-select':
+    material: INK_SACK
+    data: 15
+    slot: 15
+    priority: 3
+    display_name: '&cWhite MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to white, turning it into &bMVP&f+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&c\u25ba Unlocked at Violets Level 15!"
+    left_click_commands:
+    - '[sound] VILLAGER_NO'
+    - "[message] &cYou haven't unlocked that yet!"
+    - '[close] '
+    right_click_commands:
+    - '[sound] VILLAGER_NO'
+    - "[message] &cYou haven't unlocked that yet!"
+    - '[close] '
+  'blue-use':
+    material: INK_SACK
+    data: 4
+    slot: 16
+    priority: 1
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: stringequalsignorecase
+                input: '%vault_prefix%'
+                output: '&bMVP&9+'
+    display_name: '&aBlue MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to blue, turning it into &bMVP&9+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&a\u25ba Currently selected!"
+    left_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'blue-buy':
+    material: INK_SACK
+    data: 4
+    slot: 16
+    priority: 2
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: '>='
+                input: '%pvplevels_level%'
+                output: '20'
+    display_name: '&aBlue MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to blue, turning it into &bMVP&9+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&e\u25ba Click to select!"
+    left_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&9+ <delay=10>'
+    - '[close]'
+    right_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&9+ <delay=10>'
+    - '[close]'
+  'blue-select':
+    material: INK_SACK
+    data: 9
+    slot: 16
+    priority: 3
+    display_name: '&cBlue MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to white, turning it into &bMVP&9+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&c\u25ba Unlocked at Violets Level 20!"
+    left_click_commands:
+    - '[sound] VILLAGER_NO'
+    - "[message] &cYou haven't unlocked that yet!"
+    - '[close] '
+    right_click_commands:
+    - '[sound] VILLAGER_NO'
+    - "[message] &cYou haven't unlocked that yet!"
+    - '[close] '
+  'darkgreen-use':
+    material: INK_SACK
+    data: 2
+    slot: 19
+    priority: 1
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: stringequalsignorecase
+                input: '%vault_prefix%'
+                output: '&bMVP&2+'
+    display_name: '&aDark Green MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to dark green, turning it into &bMVP&2+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&a\u25ba Currently selected!"
+    left_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'darkgreen-buy':
+    material: INK_SACK
+    data: 2
+    slot: 19
+    priority: 2
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: '>='
+                input: '%pvplevels_level%'
+                output: '25'
+    display_name: '&aDark Green MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to dark green, turning it into &bMVP&2+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&e\u25ba Click to select!"
+    left_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&2+ <delay=10>'
+    - '[close]'
+    right_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&2+ <delay=10>'
+    - '[close]'
+  'darkgreen-select':
+    material: INK_SACK
+    data: 2
+    slot: 19
+    priority: 3
+    display_name: '&cDark Green MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to dark green, turning it into &bMVP&2+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&c\u25ba Unlocked at Violets Level 25!"
+    left_click_commands:
+    - '[sound] VILLAGER_NO'
+    - "[message] &cYou haven't unlocked that yet!"
+    - '[close] '
+    right_click_commands:
+    - '[sound] VILLAGER_NO'
+    - "[message] &cYou haven't unlocked that yet!"
+    - '[close] '
+  'darkred-use':
+    material: REDSTONE
+    data: 0
+    slot: 20
+    priority: 1
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: stringequalsignorecase
+                input: '%vault_prefix%'
+                output: '&bMVP&4+'
+    display_name: '&aDark Red MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to dark red, turning it into &bMVP&4+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&a\u25ba Currently selected!"
+    left_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'darkred-buy':
+    material: REDSTONE
+    data: 0
+    slot: 20
+    priority: 2
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: '>='
+                input: '%pvplevels_level%'
+                output: '30'
+    display_name: '&aDark Red MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to dark red, turning it into &bMVP&4+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&e\u25ba Click to select!"
+    left_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&4+ <delay=10>'
+    - '[close]'
+    right_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&4+ <delay=10>'
+    - '[close]'
+  'darkred-select':
+    material: REDSTONE
+    data: 0
+    slot: 20
+    priority: 3
+    display_name: '&cDark Red MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to dark red, turning it into &bMVP&4+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&c\u25ba Unlocked at Violets Level 30!"
+    left_click_commands:
+    - '[sound] VILLAGER_NO'
+    - "[message] &cYou haven't unlocked that yet!"
+    - '[close] '
+    right_click_commands:
+    - '[sound] VILLAGER_NO'
+    - "[message] &cYou haven't unlocked that yet!"
+    - '[close] '
+  'darkaqua-use':
+    material: INK_SACK
+    data: 6
+    slot: 21
+    priority: 1
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: stringequalsignorecase
+                input: '%vault_prefix%'
+                output: '&bMVP&3+'
+    display_name: '&aDark Aqua MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to dark aqua, turning it into &bMVP&3+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&a\u25ba Currently selected!"
+    left_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'darkaqua-buy':
+    material: INK_SACK
+    data: 6
+    slot: 21
+    priority: 2
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: '>='
+                input: '%pvplevels_level%'
+                output: '35'
+    display_name: '&aDark Aqua MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to dark aqua, turning it into &bMVP&3+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&e\u25ba Click to select!"
+    left_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&3+ <delay=10>'
+    - '[close]'
+    right_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&3+ <delay=10>'
+    - '[close]'
+  'darkaqua-select':
+    material: INK_SACK
+    data: 6
+    slot: 21
+    priority: 3
+    display_name: '&cDark Aqua MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to dark aqua, turning it into &bMVP&3+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&c\u25ba Unlocked at Violets Level 35!"
+    left_click_commands:
+    - '[sound] VILLAGER_NO'
+    - "[message] &cYou haven't unlocked that yet!"
+    - '[close] '
+    right_click_commands:
+    - '[sound] VILLAGER_NO'
+    - "[message] &cYou haven't unlocked that yet!"
+    - '[close] '
+  'darkpurple-use':
+    material: INK_SACK
+    data: 5
+    slot: 22
+    priority: 1
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: stringequalsignorecase
+                input: '%vault_prefix%'
+                output: '&bMVP&5+'
+    display_name: '&aDark Purple MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to dark purple, turning it into &bMVP&5+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&a\u25ba Currently selected!"
+    left_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'darkpurple-buy':
+    material: INK_SACK
+    data: 5
+    slot: 22
+    priority: 2
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: '>='
+                input: '%pvplevels_level%'
+                output: '40'
+    display_name: '&aDark Purple MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to dark purple, turning it into &bMVP&5+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&e\u25ba Click to select!"
+    left_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&5+ <delay=10>'
+    - '[close]'
+    right_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&5+ <delay=10>'
+    - '[close]'
+  'darkpurple-select':
+    material: INK_SACK
+    data: 5
+    slot: 22
+    priority: 3
+    display_name: '&cDark Purple MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to dark purple, turning it into &bMVP&5+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&c\u25ba Unlocked at Violets Level 40!"
+    left_click_commands:
+    - '[sound] VILLAGER_NO'
+    - "[message] &cYou haven't unlocked that yet!"
+    - '[close] '
+    right_click_commands:
+    - '[sound] VILLAGER_NO'
+    - "[message] &cYou haven't unlocked that yet!"
+    - '[close] '
+  'darkgray-use':
+    material: INK_SACK
+    data: 8
+    slot: 23
+    priority: 1
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: stringequalsignorecase
+                input: '%vault_prefix%'
+                output: '&bMVP&8+'
+    display_name: '&aDark Gray MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to dark gray, turning it into &bMVP&8+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&a\u25ba Currently selected!"
+    left_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'darkgray-buy':
+    material: INK_SACK
+    data: 8
+    slot: 23
+    priority: 2
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: '>='
+                input: '%pvplevels_level%'
+                output: '45'
+    display_name: '&aDark Gray MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to dark gray, turning it into &bMVP&8+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&e\u25ba Click to select!"
+    left_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&8+ <delay=10>'
+    - '[close]'
+    right_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&8+ <delay=10>'
+    - '[close]'
+  'darkgray-select':
+    material: INK_SACK
+    data: 8
+    slot: 23
+    priority: 3
+    display_name: '&cDark Gray MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to dark gray, turning it into &bMVP&8+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&c\u25ba Unlocked at Violets Level 45!"
+    left_click_commands:
+    - '[sound] VILLAGER_NO'
+    - "[message] &cYou haven't unlocked that yet!"
+    - '[close] '
+    right_click_commands:
+    - '[sound] VILLAGER_NO'
+    - "[message] &cYou haven't unlocked that yet!"
+    - '[close] '
+  'black-use':
+    material: INK_SACK
+    data: 0
+    slot: 24
+    priority: 1
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: stringequalsignorecase
+                input: '%vault_prefix%'
+                output: '&bMVP&0+'
+    display_name: '&aBlack MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to black, turning it into &bMVP&0+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&a\u25ba Currently selected!"
+    left_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &cYou already have that selected!'
+    - '[sound] ENDERMAN_TELEPORT'
+    - '[close]'
+  'black-buy':
+    material: INK_SACK
+    data: 0
+    slot: 24
+    priority: 2
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: '>='
+                input: '%pvplevels_level%'
+                output: '50'
+    display_name: '&aBlack MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to black, turning it into &bMVP&0+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&e\u25ba Click to select!"
+    left_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&0+ <delay=10>'
+    - '[close]'
+    right_click_commands:
+    - '[console] luckperms user %player_name% meta removeprefix 85'
+    - '[message] &aSelected!'
+    - '[sound] ORB_PICKUP'
+    - '[console] luckperms user %player_name% meta addprefix 85 &bMVP&0+ <delay=10>'
+    - '[close]'
+  'black-select':
+    material: INK_SACK
+    data: 0
+    slot: 24
+    priority: 3
+    display_name: '&cBlack MVP+ Rank Color'
+    lore:
+    - '&7Changes the color of the plus in &bMVP&c+'
+    - '&7to black, turning it into &bMVP&0+'
+    - ''
+    - '&7Shown in tab list also when chatting.'
+    - ''
+    - "&c\u25ba Unlocked at Violets Level 50!"
+    left_click_commands:
+    - '[sound] VILLAGER_NO'
+    - "[message] &cYou haven't unlocked that yet!"
+    - '[close] '
+    right_click_commands:
+    - '[sound] VILLAGER_NO'
+    - "[message] &cYou haven't unlocked that yet!"
+    - '[close] '
+  'close':
+    material: 166
+    data: 0
+    slot: 44
+    display_name: '&cClose'
+    lore:
+    - '&7Closed mvp+ rank color menu'
+    left_click_commands:
+    - '[close]'
+    right_click_commands:
+    - '[close]'
+  'back':
+    material: ARROW
+    data: 0
+    slot: 43
+    display_name: '&cGo Back'
+    lore:
+    - '&7Go back to my profile menu'
+    left_click_commands:
+    - '[openguimenu] profile_menu'
+    right_click_commands:
+    - '[openguimenu] profile_menu'
+  'info':
+    material: head;%player_name%
+    slot: 36
+    display_name: '&bMVP+ Rank Color'
+    lore:
+    - ''
+    - '&fPlayers ranked &bMVP&c+'
+    - '&fcan switch the color of their +.'
+    - ''
+    - "&b\u25ba Click to visit store server!"
+    left_click_commands:
+    - '[message]'
+    - '[message] &fVisit Server Store'
+    - '[message] &bwwww.violetsnetwork.net/#store'
+    - '[message]'
+    - '[sound] CLICK'
+    - '[close]'
+    right_click_commands:
+    - '[message]'
+    - '[message] &fVisit Server Store'
+    - '[message] &bwwww.violetsnetwork.net/#store'
+    - '[message]'
+    - '[sound] CLICK'
+    - '[close]'

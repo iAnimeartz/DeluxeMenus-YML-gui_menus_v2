@@ -1,0 +1,116 @@
+menu_title: '&8Violets Achievements'
+open_command: achievements
+update_interval: 10
+size: 35
+items:
+  'info':
+    material: head;%player_name%
+    slot: 27
+    display_name: '&b&lViolets Achievements'
+    lore:
+    - ''
+    - '&7Rank: %vault_prefix%'
+    - '&7Level: &r%pvplevels_prefix%%pvplevels_level% &7%pvplevels_group%'
+    - "&8\u300C&r%pvplevels_xp_progress_style%&8\u300D &7%pvplevels_xp_progress%%"
+    - ''
+    - "&a\u25ba Click to see your stats!"
+    left_click_commands:
+    - '[openguimenu] my_stats'
+    right_click_commands:
+    - '[openguimenu] my_stats'
+  'survival':
+    material: GRASS
+    slot: 10
+    display_name: '&aSurvival'
+    lore:
+    - ''
+    - "&a\u25ba Click to see survival achievements!"
+    left_click_commands:
+    - '[openguimenu] achievements_survival'
+    right_click_commands:
+    - '[openguimenu] achievements_survival'
+  'kitpvp':
+    material: 166 #IRON_SWORD
+    slot: 14
+    hide_attributes: true
+    display_name: '&8KitPvP'
+    lore:
+    - '&7'
+    - "&8\u25ba Not yet available" #Click to see kitpvp achievements!
+    left_click_commands:
+    - '[none]'
+  'bedwars':
+    material: 166 #BED
+    slot: 11
+    hide_enchantments: true
+    display_name: '&8Bedwars'
+    lore:
+    - '&7'
+    - "&8\u25ba Not yet available" #Click to see achievements!
+    left_click_commands:
+    - '[none]'
+  'sg':
+    material: 166 #DIAMOND_SWORD
+    slot: 15
+    hide_attributes: true
+    display_name: '&8Survival Game'
+    lore:
+    - '&7'
+    - "&8\u25ba Not yet available" #Click to see survival game achievements!
+    left_click_commands:
+    - '[none]'
+  'uhcmeetup':
+    material: 166 #APPLE
+    slot: 12
+    hide_attributes: true
+    display_name: '&8UHCMeetup'
+    lore:
+    - '&7'
+    - "&8\u25ba Not yet available" #Click to see uhcmeetup achievements!
+    left_click_commands:
+    - '[none]'
+  'ffa':
+    material: 166 #GOLD_AXE
+    slot: 16
+    hide_attributes: true
+    display_name: '&8Free For All'
+    lore:
+    - '&7'
+    - "&8\u25ba Not yet available" #Click to see free for all achievements!
+    left_click_commands:
+    - '[none]'
+  'onlinetime':
+    material: 347
+    slot: 22
+    display_name: '&aOnline Time'
+    lore:
+    - '&7Your online time within'
+    - '&7the Violets Network'
+    - ''
+    - "&a\u25ba Click to see online time achievements!"
+    left_click_commands:
+    - '[openguimenu] achievements_online'
+    right_click_commands:
+    - '[openguimenu] achievements_online'
+  'close':
+    material: 166
+    data: 0
+    slot: 35
+    display_name: '&cClose'
+    lore:
+    - '&7Closed my stats menu'
+    left_click_commands:
+    - '[close]'
+    right_click_commands:
+    - '[close]'
+  'back':
+    material: ARROW
+    data: 0
+    slot: 34
+    display_name: '&cGo Back'
+    lore:
+    - '&7Go back to my profile menu'
+    left_click_commands:
+    - '[openguimenu] profile_menu'
+    right_click_commands:
+    - '[openguimenu] profile_menu'

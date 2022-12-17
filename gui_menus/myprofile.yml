@@ -1,0 +1,398 @@
+menu_title: '&8My Profile'
+open_command: profile_menu
+update_interval: 1
+size: 45
+items:
+  'info-mvp++':
+    material: head;%player_name%
+    slot: 4
+    update: true
+    view_requirement:
+        requirements:
+            rank_requirements:
+                type: stringequalsignorecase
+                input: '%vault_rank%'
+                output: 'mvp++'
+    priority: 1
+    display_name: '&aMy Information'
+    lore:
+    - '&7Rank: %vault_prefix%'
+    - '&7Credits: &b%coins_amount%'
+    - '&7Coins: &6%vault_eco_balance_fixed%'
+    - '&7Level: &r%pvplevels_prefix%%pvplevels_level%'
+    - "&8\u300C&r%pvplevels_xp_progress_style%&8\u300D &7%pvplevels_xp_progress%%"
+    - '&7Mystery Dust: &b%gadgetsmenu_mystery_dust%'
+    - '&7Unlocked: &c%gadgetsmenu_unlocked_total%'
+    - '&7First joined: &c%player_first_join_date%'
+    - "&7MVP++ has expired:&c %luckperms_group_expiry_time_mvp++%"
+    - ''
+    - "&a\u25ba Click to view your profile!"
+    left_click_commands:
+    - '[close]'
+    - '[player] profile'
+    right_click_commands:
+    - '[close]'
+    - '[player] profile'
+  'info':
+    material: head;%player_name%
+    slot: 4
+    priority: 2
+    display_name: '&aMy Information'
+    lore:
+    - '&7Rank: %vault_prefix%'
+    - '&7Credits: &b%coins_amount%'
+    - '&7Coins: &6%vault_eco_balance_fixed%'
+    - '&7Level: &r%pvplevels_prefix%%pvplevels_level% &7%pvplevels_group%'
+    - "&8\u300C&r%pvplevels_xp_progress_style%&8\u300D &7%pvplevels_xp_progress%%"
+    - '&7Mystery Dust: &b%gadgetsmenu_mystery_dust%'
+    - '&7Unlocked: &c%gadgetsmenu_unlocked_total%'
+    - '&7First joined: &c%player_first_join_date%'
+    - ''
+    - "&a\u25ba Click to view your profile!"
+    left_click_commands:
+    - '[close]'
+    - '[player] profile'
+    right_click_commands:
+    - '[close]'
+    - '[player] profile'
+  'rankcolor':
+    material: INK_SACK
+    slot: 20
+    display_name: '&aMVP+ Rankcolor'
+    lore:
+    - '&7Players ranked &bMVP&c+'
+    - '&7can switch the color of their +.'
+    - ''
+    - "&a\u25ba Click to changed!"
+    left_click_commands:
+    - '[openguimenu] mvp+_colors'
+    right_click_commands:
+    - '[openguimenu] mvp+_colors'
+  'close':
+    material: 166
+    data: 0
+    slot: 40
+    display_name: '&cClose'
+    lore:
+    - '&7Closed violets shop menu'
+    left_click_commands:
+    - '[close]'
+    right_click_commands:
+    - '[close]'
+  'stats':
+    material: 339
+    slot: 21
+    display_name: '&aMy Stats'
+    lore:
+    - '&7Showcases your stats for each'
+    - '&7game and an overview of all.'
+    - ''
+    - "&a\u25ba Click to view your stats!"
+    left_click_commands:
+    - '[openguimenu] my_stats'
+    right_click_commands:
+    - '[openguimenu] my_stats'
+  'achievements':
+    material: DIAMOND
+    slot: 22
+    display_name: '&aAchievements'
+    lore:
+    - '&7Track your progress as you unlock'
+    - '&7Achievements and rack up points.'
+    - ''
+    - "&a\u25ba Click to see achievements!"
+    left_click_commands:
+    - '[openguimenu] achievements'
+    right_click_commands:
+    - '[openguimenu] achievements'
+  'violetslevel-off':
+    material: 379
+    slot: 23
+    priority: 1
+    display_name: '&cViolets Level'
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: stringequalsignorecase
+                input: '%pvplevels_level%'
+                output: 'pvplevels_level'
+    lore:
+    - '&7Playing minigames will reward you &bExperience&7,'
+    - '&7which is required to level up and'
+    - '&7acquire new perks and rewards!'
+    - ''
+    - "&c\u25ba Not yet available!"
+    left_click_commands:
+    - '[message] &cViolets level is not yet available!'
+    - '[sound] VILLAGER_NO'
+    - '[close]'
+    right_click_commands:
+    - '[message] &cViolets level is not yet available!'
+    - '[sound] VILLAGER_NO'
+    - '[close]'
+  'violetslevel-on':
+    material: 379
+    slot: 23
+    priority: 2
+    display_name: '&aViolets Level'
+    lore:
+    - '&7Playing minigames will reward you &bExperience&7,'
+    - '&7which is required to level up and'
+    - '&7acquire new perks and rewards!'
+    - ''
+    - "&bViolets Level &8\u300C&r%pvplevels_xp_progress_style%&8\u300D &7%pvplevels_xp_progress%%"
+    - ''
+    - "&a\u25ba Click to see your rewards!"
+    left_click_commands:
+    - '[openguimenu] rewards_level'
+    right_click_commands:
+    - '[openguimenu] rewards_level'
+  'lobbysetting':
+    material: 404
+    slot: 24
+    display_name: '&aLobby Preferences'
+    lore:
+    - '&7Setting your lobby preferences'
+    - '&7control various personal setiings'
+    - ''
+    - "&a\u25ba Click to change your settings!"
+    left_click_commands:
+    - '[close]'
+    - '[player] settings open'
+    right_click_commands:
+    - '[close]'
+    - '[player] settings open'
+  '100':
+    material: STAINED_GLASS_PANE
+    slot: 0
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '101':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 1
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '102':
+    material: STAINED_GLASS_PANE
+    slot: 2
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '103':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 3
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '105':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 5
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '106':
+    material: STAINED_GLASS_PANE
+    slot: 6
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '107':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 7
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '108':
+    material: STAINED_GLASS_PANE
+    slot: 8
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '109':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 9
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '110':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 17
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '111':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 18
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '112':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 26
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '113':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 27
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '114':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 35
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '116':
+    material: STAINED_GLASS_PANE
+    slot: 36
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '117':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 37
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '118':
+    material: STAINED_GLASS_PANE
+    slot: 38
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '135':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 39
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '120':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 41
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '122':
+    material: STAINED_GLASS_PANE
+    slot: 42
+    display_name: '&7'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '123':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 43
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '124':
+    material: STAINED_GLASS_PANE
+    slot: 44
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'

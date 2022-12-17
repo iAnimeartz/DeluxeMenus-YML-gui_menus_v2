@@ -1,0 +1,922 @@
+menu_title: '&8Game Menu'
+open_command: game_menu
+update_interval: 2
+size: 54
+items:
+  'main-lobby':
+    material: BEACON
+    slot: 49
+    display_name: '&bMain Lobby'
+    lore:
+    - '&7You are at &bMain Lobby'
+    - ''
+    - "&b\u25ba Left click teleport to spawn!"
+    - '&7%server_online% &7currently online!'
+    left_click_commands:
+    - '[player] spawn'
+    - '[sound] NOTE_SNARE_DRUM'
+    - '[close]'
+  'violets':
+    material: NETHER_STAR
+    slot: 4
+    display_name: '&9&lViolets &f&lNetwork'
+    lore:
+    - '&8Minigame network'
+    - ''
+    - '&7Welcome to Violets Network,'
+    - '&7Epic Minecraft Minigame Server!'
+    - '&7Support &c1.8.x - 1.12'
+    - '&aYou can play for free today!'
+    - ''
+    - "&b\u25ba Left click to view store!"
+    - "&c\u25ba Right click to view fanpage!"
+    - '&7%bungee_total% currently online!'
+    left_click_commands:
+    - '[message]'
+    - '[message] &fVisit Server Store to buy &bCredits'
+    - '[message] &bwwww.violetsnetwork.net/#store'
+    - '[message]'
+    - '[sound] CLICK'
+    - '[close]'
+    right_click_commands:
+    - '[message]'
+    - '[message] &fVisit Server fanpage for &cNews Update'
+    - '[message] &cwwww.facebook.com/Violets.net/'
+    - '[message]'
+    - '[sound] CLICK'
+    - '[close]'
+  'survival-update':
+    material: GRASS
+    slot: 20
+    priority: 1
+    view_requirement:
+        requirements:
+            update_requirement:
+                type: string contains
+                input: '%pinger_motd_127.0.0.1:00100%'
+                output: update
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    display_name: '&6Survival'
+    update: true
+    lore:
+    - '&8Survival'
+    - ''
+    - '&7A classic survival with economy'
+    - '&7free for play and build as home'
+    - '&7and much more features!'
+    - ''
+    - "&6\u25ba Now updating, please wait!"
+    - '&7Survival is currently updating!'
+    left_click_commands:
+    - '[message] &6Survival is currently updating!'
+    - '[message] &6Please wait until the update is complete!'
+    - '[sound] WITHER_HURT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &6Survival is currently updating!'
+    - '[message] &6Please wait until the update is complete!'
+    - '[sound] WITHER_HURT'
+    - '[close]'
+  'survival-offline':
+    material: GRASS
+    slot: 20
+    priority: 2
+    view_requirement:
+        requirements:
+            iAnimeartz_requirement:
+                type: stringequalsignorecase
+                input: '%pinger_online_127.0.0.1:00100%'
+                output: '&cOffline'
+    display_name: '&cSurvival'
+    update: true
+    lore:
+    - '&8Survival'
+    - ''
+    - '&7A classic survival with economy'
+    - '&7free for play and build as home'
+    - '&7and much more features!'
+    - ''
+    - "&c\u25ba Can't connect to server!"
+    - '&7Survival is currently offline!'
+    left_click_commands:
+    - '[message] &cSurvival is currently offline!'
+    - '[sound] WITHER_HURT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &cSurvival is currently offline!'
+    - '[sound] WITHER_HURT'
+    - '[close]'
+  'survival-online':
+    material: GRASS
+    slot: 20
+    priority: 3
+    display_name: '&aSurvival'
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    update: true
+    lore:
+    - '&8Survival'
+    - ''
+    - '&7A classic survival with economy'
+    - '&7free for play and build as home'
+    - '&7and much more features!'
+    - ''
+    - "&a\u25ba Click to connect!"
+    - '&7%bungee_survival% currently playing!'
+    left_click_commands:
+    - '[message] &aSending you to Survival server....'
+    - '[connect] Survival<delay=5>'
+    - '[connect] Survival<delay=60>'
+    - '[close]'
+    right_click_commands:
+    - '[message] &aSending you to Survival server....'
+    - '[connect] Survival<delay=5>'
+    - '[connect] Survival<delay=60>'
+    - '[close]'
+  'arenapvp-update':
+    material: DIAMOND_SWORD
+    slot: 22
+    priority: 1
+    update: true
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    view_requirement:
+        requirements:
+            update_requirement:
+                type: string contains
+                input: '%pinger_motd_127.0.0.1:00600%'
+                output: update
+    display_name: '&6ArenaPvP'
+    hide_attributes: true
+    lore:
+    - '&8Competitive'
+    - ''
+    - '&7Fight and compete in the arena'
+    - '&71v1, 2v2, 3v3, party vs party'
+    - '&7And also have &9UHCMeetup &7and &9HCF'
+    - ''
+    - "&6\u25ba Now updating, please wait!"
+    - '&7ArenaPvP is currently updating!'
+    left_click_commands:
+    - '[message] &6ArenaPvP is currently updating!'
+    - '[message] &6Please wait until the update is complete!'
+    - '[sound] WITHER_HURT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &6ArenaPvP is currently updating!'
+    - '[message] &6Please wait until the update is complete!'
+    - '[sound] WITHER_HURT'
+    - '[close]'
+  'arenapvp-offline':
+    material: DIAMOND_SWORD
+    slot: 22
+    priority: 2
+    update: true
+    view_requirement:
+        requirements:
+            iAnimeartz_requirement:
+                type: stringequalsignorecase 
+                input: '%pinger_online_127.0.0.1:00600%'
+                output: '&cOffline'
+    display_name: '&cArenaPvP'
+    hide_attributes: true
+    lore:
+    - '&8Competitive'
+    - ''
+    - '&7Fight and compete in the arena'
+    - '&71v1, 2v2, 3v3, party vs party'
+    - '&7And also have &9UHCMeetup &7and &9HCF'
+    - ''
+    - "&c\u25ba Can't connect to server!"
+    - '&7ArenaPvP is currently offline!'
+    left_click_commands:
+    - '[message] &cArenaPvP is currently offline!'
+    - '[sound] WITHER_HURT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &cArenaPvP is currently offline!'
+    - '[sound] WITHER_HURT'
+    - '[close]'
+  'arenapvp-online':
+    material: DIAMOND_SWORD
+    slot: 22
+    priority: 3
+    update: true
+    display_name: '&aArenaPvP'
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    hide_attributes: true
+    lore:
+    - '&8Survival'
+    - ''
+    - '&7Get better kits and better skills'
+    - '&7ultimate pvp each other'
+    - '&7enjoying your battles foes'
+    - '&7no matter who you really are!'
+    - ''
+    - "&a\u25ba Click to connect!"
+    - '&7%bungee_arenapvp% currently playing!'
+    left_click_commands:
+    - '[message] &aSending you to ArenaPvP server....'
+    - '[connect] ArenaPvP<delay=5>'
+    - '[connect] ArenaPvP<delay=60>'
+    - '[close]'
+    right_click_commands:
+    - '[message] &aSending you to ArenaPvP server....'
+    - '[connect] ArenaPvP<delay=5>'
+    - '[connect] ArenaPvP<delay=60>'
+    - '[close]'
+  'bw-update':
+    material: BED
+    slot: 24
+    priority: 1
+    update: true
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    view_requirement:
+        requirements:
+            update_requirement:
+                type: string contains
+                input: '%pinger_motd_127.0.0.1:00300%'
+                output: update
+    display_name: '&6Bedwars'
+    lore:
+    - '&8Team Survival'
+    - ''
+    - '&7Collect the resource spawners and'
+    - '&7buy your stuff on Villager shop'
+    - '&7to protect your team bed and'
+    - '&7destroy other team bed for won!'
+    - ''
+    - "&6\u25ba Now updating, please wait!"
+    - '&7Bedwars is currently updating!'
+    left_click_commands:
+    - '[message] &6Bedwars is currently updating!'
+    - '[message] &6Please wait until the update is complete!'
+    - '[sound] WITHER_HURT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &6Bedwars is currently updating!'
+    - '[message] &6Please wait until the update is complete!'
+    - '[sound] WITHER_HURT'
+    - '[close]'
+  'bw-offline':
+    material: BED
+    slot: 24
+    priority: 2
+    update: true
+    view_requirement:
+        requirements:
+            iAnimeartz_requirement:
+                type: stringequalsignorecase 
+                input: '%pinger_online_127.0.0.1:00300%'
+                output: '&cOffline'
+    display_name: '&cBedwars'
+    lore:
+    - '&8Team Survival'
+    - ''
+    - '&7Collect the resource spawners and'
+    - '&7buy your stuff on Villager shop'
+    - '&7to protect your team bed and'
+    - '&7destroy other team bed for won!'
+    - ''
+    - "&c\u25ba Can't connect to server!"
+    - '&7Bedwars is currently offline!'
+    left_click_commands:
+    - '[message] &cBedwars is currently offline!'
+    - '[sound] WITHER_HURT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &cBedwars is currently offline!'
+    - '[sound] WITHER_HURT'
+    - '[close]'
+  'bw-online':
+    material: BED
+    slot: 24
+    priority: 3
+    update: true
+    display_name: '&aBedwars'
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    lore:
+    - '&8Team Survival'
+    - ''
+    - '&7Collect the resource spawners and'
+    - '&7buy your stuff on Villager shop'
+    - '&7to protect your team bed and'
+    - '&7destroy other team bed for won!'
+    - ''
+    - "&a\u25ba Click to connect!"
+    - '&7%bungee_bedwars% currently playing!'
+    left_click_commands:
+    - '[message] &aSending you to Bedwars server....'
+    - '[connect] Bedwars<delay=5>'
+    - '[connect] Bedwars<delay=60>'
+    - '[close]'
+    right_click_commands:
+    - '[message] &aSending you to Bedwars server....'
+    - '[connect] Bedwars<delay=5>'
+    - '[connect] Bedwars<delay=60>'
+    - '[close]'
+  'kitpvp-update':
+    material: IRON_SWORD
+    slot: 29
+    priority: 1
+    update: true
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    view_requirement:
+        requirements:
+            update_requirement:
+                type: string contains
+                input: '%pinger_motd_127.0.0.1:00200%'
+                output: update
+    display_name: '&6KitPvP'
+    hide_attributes: true
+    lore:
+    - '&8Survival'
+    - ''
+    - '&7Get better kits and better skills'
+    - '&7ultimate pvp each other'
+    - '&7enjoying your battles foes'
+    - '&7no matter who you really are!'
+    - ''
+    - "&6\u25ba Now updating, please wait!"
+    - '&7KitPvP is currently updating!'
+    left_click_commands:
+    - '[message] &6KitPvP is currently updating!'
+    - '[message] &6Please wait until the update is complete!'
+    - '[sound] WITHER_HURT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &6KitPvP is currently updating!'
+    - '[message] &6Please wait until the update is complete!'
+    - '[sound] WITHER_HURT'
+    - '[close]'
+  'kitpvp-offline':
+    material: IRON_SWORD
+    slot: 29
+    priority: 2
+    update: true
+    view_requirement:
+        requirements:
+            iAnimeartz_requirement:
+                type: stringequalsignorecase 
+                input: '%pinger_online_127.0.0.1:00200%'
+                output: '&cOffline'
+    display_name: '&cKitPvP'
+    hide_attributes: true
+    lore:
+    - '&8Survival'
+    - ''
+    - '&7Get better kits and better skills'
+    - '&7ultimate pvp each other'
+    - '&7enjoying your battles foes'
+    - '&7no matter who you really are!'
+    - ''
+    - "&c\u25ba Can't connect to server!"
+    - '&7KitPvP is currently offline!'
+    left_click_commands:
+    - '[message] &cKitPvP is currently offline!'
+    - '[sound] WITHER_HURT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &cKitPvP is currently offline!'
+    - '[sound] WITHER_HURT'
+    - '[close]'
+  'kitpvp-online':
+    material: IRON_SWORD
+    slot: 29
+    priority: 3
+    update: true
+    display_name: '&aKitPvP'
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    hide_attributes: true
+    lore:
+    - '&8Survival'
+    - ''
+    - '&7Get better kits and better skills'
+    - '&7ultimate pvp each other'
+    - '&7enjoying your battles foes'
+    - '&7no matter who you really are!'
+    - ''
+    - "&a\u25ba Click to connect!"
+    - '&7%bungee_kitpvp% currently playing!'
+    left_click_commands:
+    - '[message] &aSending you to KitPvP server....'
+    - '[connect] KitPvP<delay=5>'
+    - '[connect] KitPvP<delay=60>'
+    - '[close]'
+    right_click_commands:
+    - '[message] &aSending you to KitPvP server....'
+    - '[connect] KitPvP<delay=5>'
+    - '[connect] KitPvP<delay=60>'
+    - '[close]'
+  'uhcmeetup-update':
+    material: APPLE
+    slot: 31
+    priority: 1
+    update: true
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    view_requirement:
+        requirements:
+            update_requirement:
+                type: string contains
+                input: '%pinger_motd_127.0.0.1:00500%'
+                output: update
+    display_name: '&6UHCMeetup'
+    hide_attributes: true
+    lore:
+    - '&8Survival'
+    - ''
+    - '&7Quick UHC meetup using random'
+    - '&7kits and use your skill to be'
+    - '&7the last one standing.'
+    - ''
+    - "&6\u25ba Now updating, please wait!"
+    - '&7UHCMeetup is currently updating!'
+    left_click_commands:
+    - '[message] &6UHCMeetup is currently updating!'
+    - '[message] &6Please wait until the update is complete!'
+    - '[sound] WITHER_HURT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &6UHCMeetup is currently updating!'
+    - '[message] &6Please wait until the update is complete!'
+    - '[sound] WITHER_HURT'
+    - '[close]'
+  'uhcmeetup-offline':
+    material: APPLE
+    slot: 31
+    priority: 2
+    update: true
+    view_requirement:
+        requirements:
+            iAnimeartz_requirement:
+                type: stringequalsignorecase 
+                input: '%pinger_online_127.0.0.1:00500%'
+                output: '&cOffline'
+    display_name: '&cUHCMeetup'
+    hide_attributes: true
+    lore:
+    - '&8Survival'
+    - ''
+    - '&7Quick UHC meetup using random'
+    - '&7kits and use your skill to be'
+    - '&7the last one standing.'
+    - ''
+    - "&c\u25ba Can't connect to server!"
+    - '&7UHCMeetup is currently offline!'
+    left_click_commands:
+    - '[message] &cUHCMeetup is currently offline!'
+    - '[sound] WITHER_HURT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &cUHCMeetup is currently offline!'
+    - '[sound] WITHER_HURT'
+    - '[close]'
+  'uhcmeetup-online':
+    material: APPLE
+    slot: 31
+    priority: 3
+    update: true
+    display_name: '&aUHCMeetup'
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    hide_attributes: true
+    lore:
+    - '&8Survival'
+    - ''
+    - '&7Quick UHC meetup using random'
+    - '&7kits and use your skill to be'
+    - '&7the last one standing.'
+    - ''
+    - "&a\u25ba Click to connect!"
+    - '&7%bungee_uhcmeetup% currently playing!'
+    left_click_commands:
+    - '[message] &aSending you to UHCMeetup server....'
+    - '[connect] UHCMeetup<delay=5>'
+    - '[connect] UHCMeetup<delay=60>'
+    - '[close]'
+    right_click_commands:
+    - '[message] &aSending you to UHCMeetup server....'
+    - '[connect] UHCMeetup<delay=10>'
+    - '[connect] UHCMeetup<delay=60>'
+    - '[close]'
+  'sg-update':
+    material: GOLD_AXE
+    slot: 33
+    priority: 1
+    update: true
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    view_requirement:
+        requirements:
+            update_requirement:
+                type: string contains
+                input: '%pinger_motd_127.0.0.1:00400%'
+                output: update
+    display_name: '&6Survival Game'
+    hide_attributes: true
+    lore:
+    - '&8Survival'
+    - ''
+    - '&7A free for all of suvival game.'
+    - '&7Go straight for the chests,'
+    - '&7Go straight for the kills.'
+    - ''
+    - "&6\u25ba Now updating, please wait!"
+    - '&7Suvival Game is currently updating!'
+    left_click_commands:
+    - '[message] &6Suvival Game is currently updating!'
+    - '[message] &6Please wait until the update is complete!'
+    - '[sound] WITHER_HURT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &6Suvival Game is currently updating!'
+    - '[message] &6Please wait until the update is complete!'
+    - '[sound] WITHER_HURT'
+    - '[close]'
+  'sg-offline':
+    material: GOLD_AXE
+    slot: 33
+    priority: 1
+    update: true
+    view_requirement:
+        requirements:
+            iAnimeartz_requirement:
+                type: stringequalsignorecase 
+                input: '%pinger_online_127.0.0.1:00400%'
+                output: '&cOffline'
+    display_name: '&cSurvival Game'
+    hide_attributes: true
+    lore:
+    - '&8Survival'
+    - ''
+    - '&7A free for all of suvival game.'
+    - '&7Go straight for the chests,'
+    - '&7Go straight for the kills.'
+    - ''
+    - "&c\u25ba Can't connect to server!"
+    - '&7Survival Game is currently offline!'
+    left_click_commands:
+    - '[message] &cSurvival Game is currently offline!'
+    - '[sound] WITHER_HURT'
+    - '[close]'
+    right_click_commands:
+    - '[message] &cSurvival Game is currently offline!'
+    - '[sound] WITHER_HURT'
+    - '[close]'
+  'sg-online':
+    material: GOLD_AXE
+    slot: 33
+    priority: 2
+    update: true
+    display_name: '&aSurvival Game'
+    enchantments:
+    - SILK_TOUCH;1
+    hide_enchantments: true
+    hide_attributes: true
+    lore:
+    - '&8Survival'
+    - ''
+    - '&7A free for all of suvival game.'
+    - '&7Go straight for the chests,'
+    - '&7Go straight for the kills.'
+    - ''
+    - "&a\u25ba Click to connect!"
+    - '&7%bungee_suvivalgame% currently playing!'
+    left_click_commands:
+    - '[message] &aSending you to Survival Game server....'
+    - '[connect] SurvivalGame<delay=5>'
+    - '[connect] SurvivalGame<delay=60>'
+    - '[close]'
+    right_click_commands:
+    - '[message] &aSending you to Survival Game server....'
+    - '[connect] SurvivalGame<delay=5>'
+    - '[connect] SurvivalGame<delay=60>'
+    - '[close]'
+  'event-offline':
+    material: 166
+    slot: 47
+    priority: 1
+    update: true
+    view_requirement:
+        requirements:
+            iAnimeartz_requirement:
+                type: stringequalsignorecase 
+                input: '%pinger_online_127.0.0.1:00800%'
+                output: '&cOffline'
+    display_name: '&8Event'
+    hide_attributes: true
+    lore:
+    - ''
+    - "&8\u25ba Offline!"
+  'event-online':
+    material: 388
+    slot: 47
+    priority: 2
+    update: true
+    display_name: '&aEvent'
+    hide_attributes: true
+    lore:
+    - ''
+    - "&a\u25ba Click to connect!"
+    - '&7%bungee_ffa% currently playing!'
+    left_click_commands:
+    - '[message] &aSending you to Event server....'
+    - '[connect] Event<delay=5>'
+    - '[connect] Event<delay=60>'
+    - '[close]'
+    right_click_commands:
+    - '[message] &aSending you to Event server....'
+    - '[connect] Event<delay=5>'
+    - '[connect] Event<delay=60>'
+    - '[close]'
+  'staffhost-offline':
+    material: 166
+    slot: 51
+    priority: 1
+    update: true
+    view_requirement:
+        requirements:
+            iAnimeartz_requirement:
+                type: stringequalsignorecase 
+                input: '%pinger_online_127.0.0.1:00900%'
+                output: '&cOffline'
+    display_name: '&8Staff Host'
+    hide_attributes: true
+    lore:
+    - ''
+    - "&8\u25ba Offline!"
+  'staffhost-online':
+    material: 264
+    slot: 51
+    priority: 2
+    update: true
+    display_name: '&aStaff Host'
+    hide_attributes: true
+    lore:
+    - ''
+    - "&a\u25ba Click to connect!"
+    - '&7%bungee_ffa% currently online!'
+    left_click_commands:
+    - '[message] &aSending you to Staff Host server....'
+    - '[connect] Staff<delay=5>'
+    - '[connect] Staff<delay=60>'
+    - '[close]'
+    right_click_commands:
+    - '[message] &aSending you to Staff Host server....'
+    - '[connect] Staff<delay=5>'
+    - '[connect] Staff<delay=60>'
+    - '[close]'
+  '100':
+    material: STAINED_GLASS_PANE
+    slot: 0
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '101':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 1
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '102':
+    material: STAINED_GLASS_PANE
+    slot: 2
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '103':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 3
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '105':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 5
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '106':
+    material: STAINED_GLASS_PANE
+    slot: 6
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '107':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 7
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '108':
+    material: STAINED_GLASS_PANE
+    slot: 8
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '109':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 9
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '110':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 17
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '111':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 18
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '112':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 26
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '113':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 27
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '114':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 35
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '115':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 36
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '116':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 44
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '117':
+    material: STAINED_GLASS_PANE
+    slot: 45
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '118':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 46
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '120':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 48
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '122':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 50
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '124':
+    material: STAINED_GLASS_PANE
+    data: 7
+    slot: 52
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'
+  '125':
+    material: STAINED_GLASS_PANE
+    slot: 53
+    display_name: '&f'
+    lore:
+    - ''
+    left_click_commands:
+    - '[none]'
+    right_click_commands:
+    - '[none]'

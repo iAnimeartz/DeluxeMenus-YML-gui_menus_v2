@@ -1,0 +1,127 @@
+menu_title: '&8My stats'
+open_command: my_stats
+size: 35
+items:
+  'survival-unknown':
+    material: GRASS
+    slot: 10
+    priority: 1
+    view_requirement:
+        requirements:
+            colors_requirement:
+                type: string contains
+                input: '%mvdw_mysql_survival_level%'
+                output: 'mvdw_mysql_survival_level'
+    display_name: '&aSurvival'
+    lore:
+    - '&7Total Kills: &cN/A'
+    - '&7Total Deaths: &cN/A'
+    - ''
+    - '&7Experience: &cN/A'
+    - '&7Level: &cN/A'
+    - '&7Balance: &cN/A'
+    - '&7'
+    left_click_commands:
+    - '[none]'
+  'survival':
+    material: GRASS
+    slot: 10
+    priority: 2
+    display_name: '&aSurvival'
+    lore:
+    - '&7Total Kills: &3%mvdw_mysql_survival_kills%'
+    - '&7Total Deaths: &3%mvdw_mysql_survival_deaths%'
+    - ''
+    - '&7Experience: &3%mvdw_mysql_survival_xp%'
+    - '&7Level: &3%mvdw_mysql_survival_level%'
+    - '&7Balance: &3%mvdw_mysql_survival_eco%$'
+    - '&7'
+    left_click_commands:
+    - '[none]'
+  'kitpvp':
+    material: IRON_SWORD
+    slot: 14
+    hide_attributes: true
+    display_name: '&aKitPvP'
+    lore:
+    - '&7Better Experience: &cN/A'
+    - '&7Better Rank: &cN/A'
+    - '&7Kills: &cN/A'
+    - '&7Deaths: &cN/A'
+    - '&7'
+    left_click_commands:
+    - '[none]'
+  'bedwars':
+    material: BED
+    slot: 11
+    hide_enchantments: true
+    display_name: '&aBedwars'
+    lore:
+    - '&7Games Played: &cN/A'
+    - '&7Destroyed Beds: &cN/A'
+    - '&7Wins: &cN/A'
+    - '&7Kills: &cN/A'
+    - '&7Deaths: &cN/A'
+    - '&7'
+    left_click_commands:
+    - '[none]'
+  'sg':
+    material: DIAMOND_SWORD
+    slot: 15
+    hide_attributes: true
+    display_name: '&aSurvival Game'
+    lore:
+    - '&7Games Played: &cN/A'
+    - '&7Wins: &cN/A'
+    - '&7Kills: &cN/A'
+    - '&7Deaths: &cN/A'
+    - '&7'
+    left_click_commands:
+    - '[none]'
+  'uhcmeetup':
+    material: APPLE
+    slot: 12
+    hide_attributes: true
+    display_name: '&aUHCMeetup'
+    lore:
+    - '&7Games Played: &cN/A'
+    - '&7Wins: &cN/A'
+    - '&7Kills: &cN/A'
+    - '&7Deaths: &cN/A'
+    - '&7'
+    left_click_commands:
+    - '[none]'
+  'ffa':
+    material: GOLD_AXE
+    slot: 16
+    hide_attributes: true
+    display_name: '&aFree For All'
+    lore:
+    - '&7Wins: &cN/A'
+    - '&7Kills: &cN/A'
+    - '&7Deaths: &cN/A'
+    - '&7'
+    left_click_commands:
+    - '[none]'
+  'close':
+    material: 166
+    data: 0
+    slot: 35
+    display_name: '&cClose'
+    lore:
+    - '&7Closed my stats menu'
+    left_click_commands:
+    - '[close]'
+    right_click_commands:
+    - '[close]'
+  'back':
+    material: ARROW
+    data: 0
+    slot: 34
+    display_name: '&cGo Back'
+    lore:
+    - '&7Go back to my profile menu'
+    left_click_commands:
+    - '[openguimenu] profile_menu'
+    right_click_commands:
+    - '[openguimenu] profile_menu'

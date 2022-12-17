@@ -1,0 +1,61 @@
+menu_title: '&8Boosters'
+open_command: violets_boosters
+update_interval: 10
+size: 45
+items:
+  'info':
+    material: head;%player_name%
+    slot: 4
+    display_name: '&b&lViolets Shop'
+    lore:
+    - ''
+    - '&7Rank: %vault_prefix%'
+    - '&7Credits: &b%coins_amount%'
+    - '&7Coins: &6%vault_eco_balance_fixed%'
+    - ''
+    - "&b\u25ba Click to visit store!"
+    left_click_commands:
+    left_click_commands:
+    - '[message]'
+    - '[message] &fVisit Server Store to buy &bCredits'
+    - '[message] &bwwww.violetsnetwork.net/#store'
+    - '[message]'
+    - '[sound] CLICK'
+    - '[close]'
+    right_click_commands:
+    - '[message]'
+    - '[message] &fVisit Server Store to buy &bCredits'
+    - '[message] &bwwww.violetsnetwork.net/#store'
+    - '[message]'
+    - '[sound] CLICK'
+    - '[close]'
+  'Boosters':
+    material: 166
+    slot: 22
+    display_name: '&c&lBoosters'
+    update: true
+    lore:
+    - ''
+    - "&c\u25ba Come soon!"
+  'back':
+    material: ARROW
+    data: 0
+    slot: 43
+    display_name: '&cGo Back'
+    lore:
+    - '&7Go back to shop menu'
+    left_click_commands:
+    - '[openguimenu] shop'
+    right_click_commands:
+    - '[openguimenu] shop'
+  'close':
+    material: 166
+    data: 0
+    slot: 44
+    display_name: '&cClose'
+    lore:
+    - '&7Closed violets shop menu'
+    left_click_commands:
+    - '[close]'
+    right_click_commands:
+    - '[close]'
